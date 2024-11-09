@@ -1,11 +1,13 @@
 @charset "utf-8";
+
+/*header*/
 .Header {
   display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 8% 0 8%;
+  padding: 20px 8%;
   box-sizing: border-box;
   z-index: 200;
   background-color: #fff;
@@ -13,6 +15,7 @@
 
 .header_logo {
   width: 129px;
+  background-color: #fff;
 }
 
 .HeaderMenu_pcnav {
@@ -25,8 +28,13 @@
   display: flex;
   align-items: center;
   gap: 68px;
+  background-color: #fff;
 }
 
+.HeaderMenu_pcnav ul li {
+  text-align: center;
+  background-color: #fff;
+}
 .button-icon {
   display: flex;
   width: 16px;
@@ -46,4 +54,56 @@
   border: none;
   border-radius: 35px;
   padding: 18px 33px;
+}
+
+/*FV*/
+.home {
+  display: flex;
+  padding: 112px 0;
+}
+
+.home_mainvisual {
+  width: 67%;
+  border-radius: 48px 0 0 48px;
+  text-align: left;
+  margin: 0 0 0 399px;
+}
+
+.home_text {
+  width: 33%;
+  font-size: 40px;
+  margin: 0;
+  position: absolute;
+  top: 14%;
+  left: 12%;
+  color: #ff853c;
+  margin: 0;
+  padding: 132px 0;
+  line-height: 1.75;
+}
+
+.home_text1 {
+  position: absolute;
+  top: 90%;
+  right: 24%;
+}
+.home_text2 {
+  font-size: 120px;
+  margin: 0;
+  color: #ff853c;
+  opacity: 0.6;
+}
+
+.home_text3 {
+  font-size: 70px;
+  margin: 0;
+  color: #ff853c;
+  opacity: 0.6;
+}
+
+.circle1 {
+  color: #82e0ff;
+  opacity: 0.4;
+  filter: 100px;
+  position: absolute;
 }
