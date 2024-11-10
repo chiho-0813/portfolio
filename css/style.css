@@ -66,7 +66,7 @@
   width: 67%;
   border-radius: 48px 0 0 48px;
   text-align: left;
-  margin: 0 0 0 399px;
+  margin: 0 0 0 auto;
 }
 
 .home_text {
@@ -74,18 +74,21 @@
   font-size: 40px;
   margin: 0;
   position: absolute;
-  top: 14%;
-  left: 12%;
+  top: 32%;
+  left: 14%;
   color: #ff853c;
   margin: 0;
-  padding: 132px 0;
   line-height: 1.75;
+  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
+    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
 }
 
 .home_text1 {
   position: absolute;
-  top: 90%;
-  right: 24%;
+  top: 69%;
+  left: 14%;
+  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
+    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
 }
 .home_text2 {
   font-size: 120px;
@@ -101,9 +104,126 @@
   opacity: 0.6;
 }
 
-.circle1 {
-  color: #82e0ff;
-  opacity: 0.4;
-  filter: 100px;
+.home_circle1 {
+  background: radial-gradient(circle, #82e0ff, #82e0ff60);
+  filter: blur(40px);
   position: absolute;
+  top: 20%;
+  left: 7%;
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
+}
+
+.home_circle2 {
+  background: radial-gradient(circle, #ff853c, #ff853c60);
+  filter: blur(40px);
+  position: absolute;
+  top: 51%;
+  left: 26%;
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
+}
+
+.paper_flight img {
+  position: absolute;
+  top: 35%;
+  left: 76%;
+  width: 152px;
+  height: 132px;
+}
+
+.line {
+  width: 100px;
+  height: 284px;
+  margin: 0 auto;
+}
+
+.about_text {
+  text-align: center;
+  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
+    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+}
+
+.about_text1 {
+  font-size: 26px;
+  color: #ff853c;
+  margin: 53px 0 18px;
+}
+
+.about_text2 {
+  font-size: 40px;
+  color: #ff853c;
+  margin: 0 0 66px;
+}
+
+.about_photo {
+  width: 642px;
+  margin: 0 auto;
+}
+
+.about_photo1 {
+  max-width: 100%;
+  height: auto;
+}
+
+.about_text3 {
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+  font-weight: 600;
+  margin: 40px 0 36px;
+}
+
+.aboutme-button {
+  display: flex;
+  border-radius: 35px;
+  border: #ff853c;
+  width: 180px;
+  height: 70px;
+  background-color: #ff853c;
+  align-items: center;
+  margin: 25px auto;
+  padding: 0;
+}
+
+.arrow_aboutme {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 43px;
+  color: #fff;
+  font-size: 16px;
+}
+.aarrow_aboutme::before,
+.arrow_aboutme::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+
+.about_circle1 {
+  background: radial-gradient(circle, #ff853c, #ff853c60);
+  filter: blur(70px);
+  position: absolute;
+  top: 138%;
+  left: 16%;
+  width: 253px;
+  height: 253px;
+  border-radius: 50%;
+}
+
+.about_circle2 {
+  background: radial-gradient(circle, #82e0ff, #82e0ff60);
+  filter: blur(40px);
+  position: absolute;
+  top: 180%;
+  left: 65%;
+  width: 253px;
+  height: 253px;
+  border-radius: 50%;
 }

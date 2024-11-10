@@ -18,8 +18,9 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #333;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-family: "Shuei KakuGo Kin B", "游ゴシック体", YuGothic, "游ゴシック",
+    "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    sans-serif;
   background-color: #f7f7f7;
 }
 
