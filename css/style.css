@@ -219,7 +219,7 @@
 
 /* 横線部分 */
 .arrow::before {
-  left: 54%;
+  left: 43%;
   width: 2px;
   height: 7px;
   border-top: 4px solid #fff;
