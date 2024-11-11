@@ -188,22 +188,54 @@
   padding: 0;
 }
 
-.arrow_aboutme {
-  position: relative;
-  display: inline-block;
-  padding: 0 0 0 43px;
-  color: #fff;
-  font-size: 16px;
+.about_me {
+  display: flex;
+  margin: 0 auto;
 }
-.aarrow_aboutme::before,
-.arrow_aboutme::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+
+.about_me a {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.about_circle {
+  position: relative;
+  width: 17px; /* 丸の直径 */
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.arrow::before,
+.arrow::after {
   content: "";
-  vertical-align: middle;
+  position: absolute;
+  background-color: #fff;
+}
+
+/* 横線部分 */
+.arrow::before {
+  left: 54%;
+  width: 2px;
+  height: 7px;
+  border-top: 4px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* 縦線部分 */
+
+.arrow::after {
+  width: 2px; /* 縦線の太さ */
+
+  height: 9px; /* 縦線の長さ */
+  top: 10%;
+  left: 54%; /* 横線の終端に合わせる */
+
+  transform: rotate(135deg); /* 45度回転 */
 }
 
 .about_circle1 {
