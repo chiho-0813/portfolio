@@ -62,6 +62,10 @@
   padding: 112px 0;
 }
 
+.home_catchcopy {
+  position: relative;
+}
+
 .home_mainvisual {
   width: 67%;
   border-radius: 48px 0 0 48px;
@@ -79,16 +83,14 @@
   color: #ff853c;
   margin: 0;
   line-height: 1.75;
-  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
-    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+  font-family: serif;
 }
 
 .home_text1 {
   position: absolute;
   top: 69%;
   left: 14%;
-  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
-    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+  font-family: serif;
 }
 .home_text2 {
   font-size: 120px;
@@ -161,6 +163,7 @@
 .about_photo {
   width: 642px;
   margin: 0 auto;
+  position: relative;
 }
 
 .about_photo1 {
@@ -184,7 +187,7 @@
   height: 70px;
   background-color: #ff853c;
   align-items: center;
-  margin: 25px auto;
+  margin: 25px auto 385px;
   padding: 0;
 }
 
@@ -197,6 +200,8 @@
   font-size: 16px;
   color: #fff;
   text-align: center;
+  font-family: serif;
+  font-weight: bold;
 }
 .about_circle {
   position: relative;
@@ -210,40 +215,21 @@
   margin-left: 8px;
 }
 
-.arrow::before,
-.arrow::after {
-  content: "";
-  position: absolute;
-  background-color: #fff;
-}
-
-/* 横線部分 */
-.arrow::before {
-  left: 43%;
-  width: 2px;
+.arrow {
+  width: 7px;
   height: 7px;
-  border-top: 4px solid #fff;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
   transform: rotate(45deg);
-}
-
-/* 縦線部分 */
-
-.arrow::after {
-  width: 2px; /* 縦線の太さ */
-
-  height: 9px; /* 縦線の長さ */
-  top: 10%;
-  left: 54%; /* 横線の終端に合わせる */
-
-  transform: rotate(135deg); /* 45度回転 */
+  margin-right: 4px;
 }
 
 .about_circle1 {
   background: radial-gradient(circle, #ff853c, #ff853c60);
   filter: blur(70px);
   position: absolute;
-  top: 138%;
-  left: 16%;
+  top: -12%;
+  left: -24%;
   width: 253px;
   height: 253px;
   border-radius: 50%;
@@ -253,9 +239,100 @@
   background: radial-gradient(circle, #82e0ff, #82e0ff60);
   filter: blur(40px);
   position: absolute;
-  top: 180%;
-  left: 65%;
+  top: 60%;
+  right: -24%;
   width: 253px;
   height: 253px;
   border-radius: 50%;
+}
+
+.skill_text {
+  text-align: center;
+  position: relative;
+}
+.skill_text1 {
+  font-size: 26px;
+  color: #ff853c;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.skill_text2 {
+  font-size: 40px;
+  color: #ff853c;
+  font-family: serif;
+  font-weight: bold;
+  margin-bottom: 95px;
+}
+
+.skill_circle {
+  background: radial-gradient(circle, #ff853c, #ff853c60);
+  filter: blur(40px);
+  position: absolute;
+  top: -3%;
+  left: 51%;
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+}
+
+.design_circle {
+  background: #ff853c;
+  width: 409px;
+  height: 409px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.design_circle img {
+  width: 219px;
+  height: 176px;
+  padding: 116px 95px;
+}
+
+.skill_contents {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 89px auto;
+  justify-content: space-between;
+  gap: 102px;
+}
+
+.skill_box {
+  width: 410px;
+  height: 640px;
+}
+
+.skill_contents_title {
+  margin: 40px auto 16px auto;
+  font-size: 26px;
+}
+
+.skill_comtents_version {
+  margin: 0 auto 50px auto;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.skill_tool {
+  display: inline-block;
+  border-bottom: 1px solid #3333;
+  padding-bottom: 8px;
+  margin: 0;
+}
+.skill_line {
+  height: 247px;
+  border: 1px solid #3333;
+  position: absolute;
+  top: 40%;
+  left: 8%;
+}
+.design_circle p {
+  transform: rotate(90deg);
+  font-size: 26px;
+  position: absolute;
+  top: 10%;
+  left: 0;
 }
