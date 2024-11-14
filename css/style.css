@@ -144,7 +144,7 @@
 
 .about_text {
   text-align: center;
-  font-family: serif;
+  position: relative;
 }
 
 .about_text1 {
@@ -214,7 +214,7 @@
   margin-left: 8px;
 }
 
-.arrow {
+.about_arrow {
   width: 7px;
   height: 7px;
   border-top: 2px solid white;
@@ -287,7 +287,10 @@
 .skill_circle1 img {
   width: 219px;
   height: 176px;
-  padding: 95px 95px 95px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .skill_contents {
@@ -368,19 +371,33 @@
 
 .works_text {
   text-align: center;
-  font-family: serif;
+  position: relative;
 }
 
 .works_text1 {
   font-size: 26px;
   color: #ff853c;
-  margin: 53px 0 18px;
+  font-family: serif;
+  font-weight: bold;
 }
 
 .works_text2 {
   font-size: 40px;
   color: #ff853c;
-  margin: 0 0 66px;
+  font-family: serif;
+  font-weight: bold;
+  margin-bottom: 95px;
+}
+
+.works_circle {
+  background: radial-gradient(circle, #82e0ff, #82e0ff60);
+  filter: blur(40px);
+  position: absolute;
+  top: 0%;
+  left: 40%;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
 }
 
 .works_photo {
@@ -391,12 +408,13 @@
 }
 
 .slick-prev {
-  left: 22%;
+  left: 3%;
   z-index: 99;
 }
 .slick-next {
-  right: 22%;
+  right: 3%;
 }
+
 .slick-next:before {
   content: "";
   display: block;
@@ -406,6 +424,7 @@
   border-right: 3px solid white;
   transform: rotate(45deg);
 }
+
 .slick-prev:before {
   content: "";
   display: block;
@@ -415,6 +434,73 @@
   border-right: 3px solid white;
   transform: rotate(-135deg);
 }
+
 .lb-number {
   display: none !important;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.works_oblong {
+  height: auto;
+  background: #e4d7d7;
+}
+
+.works_oblong a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.slick-dots li button:before {
+  margin-top: 32px;
+  font-size: 14px;
+}
+
+.works-button {
+  display: flex;
+  border-radius: 35px;
+  border: #ff853c;
+  width: 180px;
+  height: 70px;
+  background-color: #ff853c;
+  align-items: center;
+  margin: 80px auto 385px;
+  padding: 0;
+}
+
+.works_more {
+  display: flex;
+  margin: 0 auto;
+}
+
+.works_more a {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.works_circle1 {
+  position: relative;
+  width: 17px; /* 丸の直径 */
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.works_arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin-right: 4px;
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
             <div class="about_me">
                 <a href="#aboutme">About me</a>
                 <div class="about_circle">
-                    <div class="arrow"></div>
+                    <div class="about_arrow"></div>
                 </div>
             </div>
         </button>
@@ -162,24 +163,31 @@
         <div class="works_text">
             <p class="works_text1">03</p>
             <p class="works_text2">WORKS</p>
-            <div class="skill_circle"></div>
+            <div class="works_circle"></div>
         </div>
     </section>
     <section id="works" class="works">
         <div class="works_content">
             <div class="works_photo">
-                <div>
+                <div class="works_oblong">
                     <picture>
-                        <source srcset="./images/burger POP2_2.png" media="(max-width:767px)">
-                        <a href="./images/burger POP2_2.png" data-lightbox="lightbox" data-title="images1/5">
-                            <img src="./images/burger POP2_2.png" alt=""></a>
+                        <source srcset="./images/burger_POP1_2.png" media="(max-width:767px)">
+                        <a href="./images/burger_POP1_2.png" data-lightbox="lightbox" data-title="images1/5">
+                            <img src="./images/burger_POP1_2.png" alt=""></a>
                     </picture>
                 </div>
                 <div>
                     <picture>
-                        <source srcset="./images/kadai2_nagaoka_02.jpg" media="(max-width:767px)">
-                        <a href="./images/kadai2_nagaoka_02.jpg" data-lightbox="lightbox" data-title="images2/5">
-                            <img src="./images/kadai2_nagaoka_02.jpg" alt=""></a>
+                        <source srcset="./images/burger_POP2_2.png" media="(max-width:767px)">
+                        <a href="./images/burger_POP2_2.png" data-lightbox="lightbox" data-title="images2/5">
+                            <img src="./images/burger_POP2_2.png" alt=""></a>
+                    </picture>
+                </div>
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/burger_Rich1_2.png" media="(max-width:767px)">
+                        <a href="./images/burger_Rich1_2.png" data-lightbox="lightbox" data-title="images3/5">
+                            <img src="./images/burger_Rich1_2.png" alt=""></a>
                     </picture>
                 </div>
                 <div>
@@ -189,39 +197,40 @@
                             <img src="./images/burger_Rich2-2.png" alt=""></a>
                     </picture>
                 </div>
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/kadai_nagaoka_01②.jpg" media="(max-width:767px)">
+                        <a href="./images/kadai_nagaoka_01②.jpg" data-lightbox="lightbox" data-title="images3/5">
+                            <img src="./images/kadai_nagaoka_01②.jpg" alt=""></a>
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="./images/kadai2_nagaoka_02.jpg" media="(max-width:767px)">
+                        <a href="./images/kadai2_nagaoka_02.jpg" data-lightbox="lightbox" data-title="images3/5">
+                            <img src="./images/kadai2_nagaoka_02.jpg" alt=""></a>
+                    </picture>
+                </div>
             </div>
+            <button class="works-button">
+                <div class="works_more">
+                    <a href="#worksmore">Works more</a>
+                    <div class="works_circle1">
+                        <div class="works_arrow"></div>
+                    </div>
+                </div>
+            </button>
     </section>
 
     <script>
-        $(function () {
-            $('.sp_btn').on('click', function () {
-                $('.sp_btn').toggleClass('open');
-                $('.sp_nav').fadeToggle();
-            })
-
-            $('.works_slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                arrows: false
-            })
-
+        $(document).ready(function () {
             $('.works_photo').slick({
+                dots: true,
                 infinite: true,
-                speed: 300,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                responsive: [{
-                    breakpoint: 767,
-                    settings: {
-                        infinite: true,
-                        speed: 300,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-
-                    }
-                }]
-            })
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
         });
 
     </script>
