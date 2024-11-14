@@ -144,8 +144,7 @@
 
 .about_text {
   text-align: center;
-  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro",
-    " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+  font-family: serif;
 }
 
 .about_text1 {
@@ -276,20 +275,19 @@
   border-radius: 50%;
 }
 
-.design_circle {
+.skill_circle1 {
   background: #ff853c;
   width: 409px;
   height: 409px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   position: relative;
 }
 
-.design_circle img {
+.skill_circle1 img {
   width: 219px;
   height: 176px;
-  padding: 116px 95px;
+  padding: 95px 95px 95px 10px;
 }
 
 .skill_contents {
@@ -322,17 +320,101 @@
   padding-bottom: 8px;
   margin: 0;
 }
-.skill_line {
-  height: 247px;
-  border: 1px solid #3333;
-  position: absolute;
-  top: 40%;
-  left: 8%;
+
+.skill_line_designs {
+  width: 1px;
+  height: 298px;
+  background: #3333;
+  margin-top: 35px;
 }
-.design_circle p {
+
+.skill_line_coding {
+  width: 1px;
+  height: 298px;
+  background: #3333;
+  margin-top: 30px;
+}
+
+.skill_line_accounting {
+  width: 1px;
+  height: 298px;
+  background: #3333;
+  margin-top: 55px;
+}
+
+.skill_line_welfare {
+  width: 1px;
+  height: 298px;
+  background: #3333;
+  margin-top: 35px;
+}
+
+.skill_circle1 p {
   transform: rotate(90deg);
   font-size: 26px;
-  position: absolute;
-  top: 10%;
-  left: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.skill_circle1 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill {
+  margin-bottom: 395px;
+}
+
+.works_text {
+  text-align: center;
+  font-family: serif;
+}
+
+.works_text1 {
+  font-size: 26px;
+  color: #ff853c;
+  margin: 53px 0 18px;
+}
+
+.works_text2 {
+  font-size: 40px;
+  color: #ff853c;
+  margin: 0 0 66px;
+}
+
+.works_photo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 58px;
+}
+
+.slick-prev {
+  left: 22%;
+  z-index: 99;
+}
+.slick-next {
+  right: 22%;
+}
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+}
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(-135deg);
+}
+.lb-number {
+  display: none !important;
 }

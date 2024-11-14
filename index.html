@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHIHO DESIGN</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -72,11 +76,13 @@
             <div class="skill_circle"></div>
         </div>
         <div class="skill_contents">
-            <ul class="skill_design">
+            <ul>
                 <li class="skill_box">
-                    <div class="design_circle">
-                        <p>Designs</p>
-                        <div class="skill_line"></div>
+                    <div class="skill_circle1">
+                        <div>
+                            <p>Designs</p>
+                            <div class="skill_line_designs"></div>
+                        </div>
                         <img src="./images/WEBページのアイコン素材.svg" alt="WEBページのアイコン">
                     </div>
                     <dl>
@@ -89,11 +95,13 @@
                     </dl>
                 </li>
             </ul>
-            <ul class="skill_design">
+            <ul>
                 <li class="skill_box">
-                    <div class="design_circle">
-                        <p>Coding</p>
-                        <div class="skill_line"></div>
+                    <div class="skill_circle1">
+                        <div>
+                            <p>Coding</p>
+                            <div class="skill_line_coding"></div>
+                        </div>
                         <img src="./images/プログラムアイコン.svg" alt="パソコンのアイコン">
                     </div>
                     <dl>
@@ -106,11 +114,13 @@
                     </dl>
                 </li>
             </ul>
-            <ul class="skill_design">
+            <ul>
                 <li class="skill_box">
-                    <div class="design_circle">
-                        <p>Accounting</p>
-                        <div class="skill_line"></div>
+                    <div class="skill_circle1">
+                        <div>
+                            <p>Accounting</p>
+                            <div class="skill_line_accounting"></div>
+                        </div>
                         <img src="./images/えんぴつ付きのノートアイコン.svg" alt="ノートと鉛筆のアイコン">
                     </div>
                     <dl>
@@ -124,11 +134,13 @@
                     </dl>
                 </li>
             </ul>
-            <ul class="skill_design">
+            <ul>
                 <li class="skill_box">
-                    <div class="design_circle">
-                        <p>Welfare</p>
-                        <div class="skill_line"></div>
+                    <div class="skill_circle1">
+                        <div>
+                            <p>Welfare</p>
+                            <div class="skill_line_welfare"></div>
+                        </div>
                         <img src="./images/介護のピクトグラム.svg" alt="介護のアイコン">
                     </div>
                     <dl>
@@ -144,6 +156,74 @@
             </ul>
         </div>
     </section>
+    <section id="works" class="works">
+        <div class="works_text">
+            <p class="works_text1">03</p>
+            <p class="works_text2">WORKS</p>
+            <div class="skill_circle"></div>
+        </div>
+    </section>
+    <section id="works" class="works">
+        <div class="works_content">
+            <div class="works_photo">
+                <div>
+                    <picture>
+                        <source srcset="./images/burger POP2_2.png" media="(max-width:767px)">
+                        <a href="./images/burger POP2_2.png" data-lightbox="lightbox" data-title="images1/5">
+                            <img src="./images/burger POP2_2.png" alt=""></a>
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="./images/kadai2_nagaoka_02.jpg" media="(max-width:767px)">
+                        <a href="./images/kadai2_nagaoka_02.jpg" data-lightbox="lightbox" data-title="images2/5">
+                            <img src="./images/kadai2_nagaoka_02.jpg" alt=""></a>
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="./images/burger_Rich2-2.png" media="(max-width:767px)">
+                        <a href="./images/burger_Rich2-2.png" data-lightbox="lightbox" data-title="images3/5">
+                            <img src="./images/burger_Rich2-2.png" alt=""></a>
+                    </picture>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+
+            $('.works_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false
+            })
+
+            $('.works_photo').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+
+                    }
+                }]
+            })
+        });
+
+    </script>
+
 </body>
 
 </html>
