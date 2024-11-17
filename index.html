@@ -40,10 +40,14 @@
             <p class="home_text2">NAGAOKA CHIHO</p>
             <P class="home_text3">Put your thoughts on a paper flight</P>
         </div>
-        <div class="home_circle1"></div>
-        <div class="home_circle2"></div>
+        <div class="circle">
+            <div class="home_circle1"></div>
+            <div class="home_circle2"></div>
+        </div>
         <div class="paper_flight">
-            <img src="./images/paper_flight.png" alt="紙飛行機">
+            <div class="paper_flight_photo">
+                <img src="./images/paper_flight.png" width="152" height="132" alt="紙飛行機" class="target">
+            </div>
         </div>
         <img src="./images/FV_image.jpg" alt="夕焼けの空" class="home_mainvisual">
     </section>
@@ -164,7 +168,7 @@
             <div class="works_circle"></div>
         </div>
     </section>
-    <section id="#works" class="works">
+    <section id="works" class="works">
         <div class="works_content">
             <div class="works_photo">
                 <div class="works_oblong">
@@ -219,7 +223,7 @@
                 </div>
             </button>
     </section>
-    <section id="#contact" class="contact">
+    <section id="contact" class="contact">
         <div class="contact_contents">
             <div class="contact_text">
                 <p class="contact_text1">04</p>
@@ -271,6 +275,74 @@
                 speed: 500,
                 slidesToShow: 3,
                 slidesToScroll: 1
+            });
+        });
+
+        const fly = (paper_flight_photo, target) => {
+            const amplitude = { y: 14, rotation: -2.5 }
+            const speed = { y: 0.001 }
+            const anime = paper_flight_photo.animate([{ transform: 'translateX(100%)' }, { transform: 'translateX(-100vw)' }], {
+                duration: window.innerWidth * 40,
+                iterations: Infinity
+            })
+
+            console.log(window.innerWidth * 32)
+
+            let multiplier = 1
+            let previousTime = performance.now()
+            let yRadian = 0
+
+            const tick = () => {
+                const now = performance.now()
+                const diff = now - previousTime
+
+                previousTime = now
+                yRadian += multiplier * speed.y * diff
+
+                const y = amplitude.y * Math.sin(yRadian)
+                const rotation = amplitude.rotation * (1 + Math.sin(yRadian))
+
+                target.style.transform = `rotate(${rotation}deg) translateY(${y}%)`
+
+                requestAnimationFrame(tick)
+            }
+
+            tick()
+
+            return {
+                faster: () => {
+                    multiplier += 1
+                    anime.updatePlaybackRate(multiplier)
+                }
+            }
+        }
+
+        const paper_flight_photo = document.querySelector('.paper_flight_photo ')
+        const target = document.querySelector('.target')
+
+        if (paper_flight_photo && target) {
+            const flyingPteranodon = fly(paper_flight_photo, target)
+
+            document.body.addEventListener('click', () => flyingPteranodon.faster())
+        }
+
+        $(function () {
+            // ウィンドウをスクロールしたら…
+            $(window).scroll(function () {
+                // ウィンドウの高さを取得
+                const wHeight = $(window).height();
+                // スクロールした量を取得
+                const wScroll = $(window).scrollTop();
+                // それぞれのblockクラスに対して…
+                $(".line").each(function () {
+                    // それぞれのblockクラスのウィンドウからの高さを取得
+                    const bPosition = $(this).offset().top;
+                    // スクロールした量が要素の高さを上回ったら
+                    // その数値にウィンドウの高さを引き、最後に200pxを足す
+                    if (wScroll > bPosition - wHeight + 200) {
+                        $(this).addClass("fadeIn");
+                    }
+                });
             });
         });
 

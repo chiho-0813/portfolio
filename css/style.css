@@ -110,6 +110,21 @@
   opacity: 0.6;
 }
 
+@keyframes my-fade-in1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home_circle1 {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in1;
+  animation-duration: 3s;
+}
+
 .home_circle1 {
   background: radial-gradient(circle, #82e0ff, #82e0ff60);
   filter: blur(40px);
@@ -119,6 +134,21 @@
   width: 133px;
   height: 133px;
   border-radius: 50%;
+}
+
+@keyframes my-fade-in2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home_circle2 {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in2;
+  animation-duration: 1s;
 }
 
 .home_circle2 {
@@ -132,23 +162,43 @@
   border-radius: 50%;
 }
 
-.paper_flight img {
+.paper_flight {
   position: absolute;
   top: 35%;
   left: 76%;
-  width: 152px;
-  height: 132px;
+  width: 100%;
+  height: auto;
+}
+
+.paper_flight_photo {
+  width: 50%;
+  max-width: 350px;
+}
+
+.target {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
 }
 
 .line {
   width: 100px;
   height: 284px;
   margin: 0 auto;
+  margin-bottom: 100px;
+  opacity: 0; /* 最初は非表示にしておく */
+  transition: all 2s; /* 動きを滑らかに */
+}
+
+.fadeIn {
+  opacity: 1;
 }
 
 .about_text {
   text-align: center;
   position: relative;
+  font-family: serif;
 }
 
 .about_text1 {
@@ -227,6 +277,21 @@
   margin-right: 4px;
 }
 
+@keyframes my-fade-in3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about_circle1 {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in3;
+  animation-duration: 3s;
+}
+
 .about_circle1 {
   background: radial-gradient(circle, #ff853c, #ff853c60);
   filter: blur(70px);
@@ -236,6 +301,21 @@
   width: 253px;
   height: 253px;
   border-radius: 50%;
+}
+
+@keyframes my-fade-in4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about_circle2 {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in4;
+  animation-duration: 1s;
 }
 
 .about_circle2 {
@@ -266,6 +346,21 @@
   font-family: serif;
   font-weight: bold;
   margin-bottom: 95px;
+}
+
+@keyframes my-fade-in5 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skill_circle {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in5;
+  animation-duration: 1s;
 }
 
 .skill_circle {
@@ -393,6 +488,20 @@
   margin-bottom: 95px;
 }
 
+@keyframes my-fade-in6 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.works_circle {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in6;
+  animation-duration: 1s;
+}
 .works_circle {
   background: radial-gradient(circle, #82e0ff, #82e0ff60);
   filter: blur(40px);
@@ -549,6 +658,20 @@
   margin-bottom: 95px;
 }
 
+@keyframes my-fade-in7 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contact_circle {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+  animation-name: my-fade-in7;
+  animation-duration: 1s;
+}
 .contact_circle {
   background: radial-gradient(circle, #ff853c, #ff853c60);
   filter: blur(40px);
