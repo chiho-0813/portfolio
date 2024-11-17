@@ -26,13 +26,11 @@
                 <ul>
                     <li> <a href="#home">ホーム<br>HOME</a></li>
                     <li><a href="#about">私について<br>ABOUT</a></li>
-                    <li><a href="#SKILL">スキル<br>SKILL</a></li>
-                    <li><a href="#WORKS">制作実績<br>WORKS</a></li>
+                    <li><a href="#skill">スキル<br>SKILL</a></li>
+                    <li><a href="#works">制作実績<br>WORKS</a></li>
+                    <li class="header_contact"><a href="#contact"><img src="./images/mail_icon.svg" alt="アイコン"
+                                class="button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
-                <button class="icon-button">
-                    <img src="./images/mail_icon.svg" alt="アイコン" class="button-icon">
-                    <span>お問合せ<br>CONTACT</span>
-                </button>
             </nav>
         </div>
     </header>
@@ -166,7 +164,7 @@
             <div class="works_circle"></div>
         </div>
     </section>
-    <section id="works" class="works">
+    <section id="#works" class="works">
         <div class="works_content">
             <div class="works_photo">
                 <div class="works_oblong">
@@ -221,7 +219,50 @@
                 </div>
             </button>
     </section>
+    <section id="#contact" class="contact">
+        <div class="contact_contents">
+            <div class="contact_text">
+                <p class="contact_text1">04</p>
+                <p class="contact_text2">CONTACT</p>
+                <div class="contact_circle"></div>
+            </div>
+            <p class="contact_Information">最後までご覧いただきありがとうございます。<br>ご依頼やご相談はお気軽にこちらのフォームをご利用ください。</p>
+            <div class="contact_inquiry">
+                <label for="name" class="">お名前</label>
+                <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
+            </div>
+            <div class="contact_inquiry">
+                <label for="address">メールアドレス</label>
+                <input type="text" id="address" name="address" placeholder="メールアドレスを入力してください" required>
+            </div>
+            <div class="contact_inquiry">
+                <label for="details">お問合せ内容</label>
+                <input type="text" id="details" name="details" placeholder="お問合せ内容を入力してください" required>
+            </div>
 
+            <div class="contact_button">
+                <button type="contact" class="contact_button_text">送信する</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="Footer">
+            <h1 class="footer_logo">
+                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+            </h1>
+            <nav class="FooterMenu_pcnav">
+                <ul>
+                    <li> <a href="#home">ホーム<br>HOME</a></li>
+                    <li><a href="#about">私について<br>ABOUT</a></li>
+                    <li><a href="#skill">スキル<br>SKILL</a></li>
+                    <li><a href="#works">制作実績<br>WORKS</a></li>
+                    <li class="footer_contact"><a href="#contact"><img src="./images/mail_icon_footer.svg" alt="アイコン"
+                                class="footer_button-icon">お問合せ<br>CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>© 2024 CHIHO DESIGN All rights reserved.</p>
+    </footer>
     <script>
         $(document).ready(function () {
             $('.works_photo').slick({
