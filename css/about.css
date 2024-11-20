@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+/*header*/
+.Header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 8%;
+  box-sizing: border-box;
+  z-index: 200;
+  background-color: #fff;
+}
+.header_logo {
+  width: 129px;
+  background-color: #fff;
+}
+.HeaderMenu_pcnav {
+  display: flex;
+  gap: 46px;
+  font-weight: bold;
+  position: relative;
+}
+.HeaderMenu_pcnav ul {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+}
+.HeaderMenu_pcnav ul li {
+  text-align: center;
+}
+
+/*header_about*/
+.header_about_arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid #3333;
+  border-right: 3px solid #3333;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 30%;
+  left: 107%;
+}
+.header_about_item {
+  position: relative;
+}
+/*header_about_animation*/
+@keyframes header-fade-in2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.about_item {
+  /* .about_itemが「header-fade-in」で状態変化するように指定 */
+  animation-name: header-fade-in2;
+  animation-duration: 1s;
+}
+.about_item {
+  color: #fff;
+  padding: 10px;
+  background: #ff853c;
+  border-radius: 8px;
+  position: absolute;
+  top: 105%;
+  right: 70%;
+}
+
+/*header_works*/
+li.works_item {
+  position: relative;
+}
+.header_works_arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid #3333;
+  border-right: 3px solid #3333;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 40%;
+  right: 33%;
+}
+.works_item {
+  /* .works_itemが「header-fade-in」で状態変化するように指定 */
+  animation-name: header-fade-in2;
+  animation-duration: 1s;
+}
+.works_item {
+  color: #fff;
+  padding: 10px;
+  background: #ff853c;
+  border-radius: 8px;
+  position: absolute;
+  top: 105%;
+  right: 31%;
+}
+
+/*header_contact*/
+.button-icon {
+  display: flex;
+  width: 16px;
+  max-width: 33px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px 8px 10px 8px;
+  margin-right: 4px;
+}
+.header_contact a {
+  display: flex;
+  max-width: 180px;
+  align-items: center;
+  background: #ff853c;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  padding: 18px 33px;
+}
+
+/*about_works*/
+li.about_sub_item,
+li.works_sub_item {
+  color: #fff;
+}
+/*headerの余白調整*/
+#about,
+#skill,
+#works,
+#contact {
+  padding-top: 112px;
+  margin-top: -112px;
+}
+
+/* aboutme */
+.aboutme {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding-top: 202px;
+}
+.aboutme_title {
+  text-align: center;
+  padding-bottom: 80px;
+}
+.aboutme_contents {
+  display: flex;
+}
+
+/*footer*/
+footer {
+  background: linear-gradient(to right, #e9bfb6, #8a9cb6);
+}
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 88px 8% 122px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 276px;
+}
+.footer_logo {
+  width: 129px;
+}
+.FooterMenu_pcnav {
+  font-weight: bold;
+}
+.FooterMenu_pcnav ul {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+}
+.FooterMenu_pcnav li {
+  text-align: center;
+}
+.footer_button-icon {
+  display: flex;
+  width: 16px;
+  max-width: 33px;
+  background: #ff853c;
+  border-radius: 50%;
+  padding: 10px 8px 10px 8px;
+  margin-right: 4px;
+}
+.FooterMenu_pcnav a {
+  color: #fff;
+}
+.footer_contact {
+  border-radius: 35px;
+}
+.footer_contact {
+  background: #fff;
+}
+.footer_contact a {
+  display: flex;
+  max-width: 180px;
+  align-items: center;
+  background: #fff;
+  color: #ff853c;
+  border: none;
+  padding: 18px 33px;
+  border-radius: 35px;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 16px;
+  color: #fff;
+}
+
+/*scroll_circle*/
+.scroll_circle {
+  opacity: 0;
+  transition: 2s;
+}
+.scroll_circle.is-show {
+  opacity: 1;
+}

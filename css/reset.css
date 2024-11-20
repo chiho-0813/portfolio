@@ -21,6 +21,9 @@ li {
   font-family: "Shuei KakuGo Kin B", "游ゴシック体", YuGothic, "游ゴシック",
     "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     sans-serif;
+}
+
+body {
   background-color: #f7f7f7;
 }
 

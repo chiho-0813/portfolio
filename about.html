@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIHO DESIGN</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="Header">
+            <h1 class="header_logo">
+                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+            </h1>
+            <nav class="HeaderMenu_pcnav">
+                <ul>
+                    <li> <a href="#home">ホーム<br>HOME</a></li>
+                    <li class="header_about_item"><a href="#about">私について<br>ABOUT<div class="header_about_arrow"></div>
+                        </a>
+                    </li>
+                    <div class="about_item">
+                        <a href="#aboutme" class="about_sub_item">about me</a>
+                    </div>
+                    <li><a href="#skill">スキル<br>SKILL</a></li>
+                    <li class="header_works_item"><a href="#works">制作実績<br>WORKS <div class="header_works_arrow"></div>
+                        </a>
+                    </li>
+                    <div class="works_item">
+                        <a href="#worksmore" class="works_sub_item">Works more</a>
+                    </div>
+                    <li class="header_contact"><a href="#contact"><img src="./images/mail_icon.svg" alt="アイコン"
+                                class="button-icon">お問合せ<br>CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="aboutme" class="aboutme">
+        <h2 class="aboutme_title">About me</h2>
+        <div class="aboutme_contents">
+            <img src="./images/aboutme.jpg" alt="プロフィール写真" class="aboutme_photo">
+            <div class="aboutme_text">
+                <p class="aboutme_text1">長岡 千穂</p>
+                <p class="aboutme_text2">Nagaoka Chiho</p>
+                <p class="aboutme_text3">1989年、秋田県横手市生まれ。</p>
+                <p class="aboutme_text4">
+                    現在は、三重県在住で2人の子供のママです。高校、大学で商業科を専攻。ビジネスの専門科目を学びました。大学卒業後は、ホテルマン、歯科助手、営業、営業事務、経理と様々な職業を経験してきました。</p>
+                <p class="aboutme_text5">
+                    私がデザインと出会ったのは、老人ホームの営業時代です。地域に配るチラシを作成したり、WEBサイトのブログ更新やイベント更新を行っていました。文字の大きさや余白で指摘を頂くことがあり、どう改善したらいいのか分からず当時はモヤモヤとしていました。それと同時になぜ違うのか理由を知りたいと考えるようになりました。
+                </p>
+                <p class="aboutme_text6">
+                    子供が2人生まれ、自分の時間も持てるようになり、自分だけのスキルを身につけたい、デザインの意味を知りたいとデザインの世界に飛び込みました。</p>
+                <p class="aboutme_text7">
+                    今後は福祉×デザインを軸にお客様の一人一人が笑顔になれるようなデザインをお届けしたいと思っています。
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="Footer">
+            <h1 class="footer_logo">
+                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+            </h1>
+            <nav class="FooterMenu_pcnav">
+                <ul>
+                    <li> <a href="#home">ホーム<br>HOME</a></li>
+                    <li><a href="#about">私について<br>ABOUT</a></li>
+                    <li><a href="#skill">スキル<br>SKILL</a></li>
+                    <li><a href="#works">制作実績<br>WORKS</a></li>
+                    <li class="footer_contact"><a href="#contact"><img src="./images/mail_icon_footer.svg" alt="アイコン"
+                                class="footer_button-icon">お問合せ<br>CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>© 2024 CHIHO DESIGN All rights reserved.</p>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.works_photo').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+
+        $(function () {
+            //クリックで要素を表示
+            $('.header_about_item').click(function () {
+                $('.about_item').toggle();
+            })
+        });
+        $(function () {
+            //クリックで要素を表示
+            $('.header_works_item').click(function () {
+                $('.works_item').toggle();
+            })
+        });
+
+        $(function () {
+            // ウィンドウをスクロールしたら…
+            $(window).scroll(function () {
+                // ウィンドウの高さを取得
+                const wHeight = $(window).height();
+                // スクロールした量を取得
+                const wScroll = $(window).scrollTop();
+                // それぞれのblockクラスに対して…
+                $(".line").each(function () {
+                    // それぞれのblockクラスのウィンドウからの高さを取得
+                    const bPosition = $(this).offset().top;
+                    // スクロールした量が要素の高さを上回ったら
+                    // その数値にウィンドウの高さを引き、最後に200pxを足す
+                    if (wScroll > bPosition - wHeight + 200) {
+                        $(this).addClass("fadeIn");
+                    }
+                });
+                $(".scroll_circle").each(function () {
+                    if ((wScroll + wHeight) > $(this).offset().top) {
+                        $(this).addClass('is-show');
+                    }
+                })
+            });
+        });
+    </script>
+
+</body>
+
+</html>
