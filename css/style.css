@@ -44,6 +44,7 @@
 }
 .header_about_item {
   position: relative;
+  cursor: pointer;
 }
 /*header_about_animation*/
 @keyframes header-fade-in2 {
@@ -55,11 +56,6 @@
   }
 }
 .about_item {
-  /* .about_itemが「header-fade-in」で状態変化するように指定 */
-  animation-name: header-fade-in2;
-  animation-duration: 1s;
-}
-.about_item {
   color: #fff;
   padding: 10px;
   background: #ff853c;
@@ -67,6 +63,7 @@
   position: absolute;
   top: 105%;
   right: 70%;
+  display: none;
 }
 
 /*header_works*/
@@ -84,11 +81,6 @@ li.works_item {
   right: 33%;
 }
 .works_item {
-  /* .works_itemが「header-fade-in」で状態変化するように指定 */
-  animation-name: header-fade-in2;
-  animation-duration: 1s;
-}
-.works_item {
   color: #fff;
   padding: 10px;
   background: #ff853c;
@@ -96,6 +88,7 @@ li.works_item {
   position: absolute;
   top: 105%;
   right: 31%;
+  display: none;
 }
 
 /*header_contact*/
@@ -134,6 +127,21 @@ li.works_sub_item {
   margin-top: -112px;
 }
 
+@media screen and (max-width: 1000px) {
+  .HeaderMenu_pcnav ul {
+    gap: 35px;
+  }
+  .header_logo {
+    width: 70px;
+    padding-right: 12px;
+  }
+  .header_about_arrow {
+    left: 104%;
+  }
+  .header_works_arrow {
+    right: 35%;
+  }
+}
 /*FV*/
 .home {
   display: flex;
@@ -295,6 +303,9 @@ li.works_sub_item {
   }
 }
 /*about*/
+.about {
+  overflow: hidden;
+}
 .about_text {
   text-align: center;
   position: relative;
@@ -419,31 +430,34 @@ li.works_sub_item {
 }
 .skill_circle1 {
   background: #ff853c;
-  width: 409px;
-  height: 409px;
+  width: 100%;
   border-radius: 50%;
   display: flex;
   position: relative;
+  aspect-ratio: 1;
 }
 .skill_circle1 img {
-  width: 219px;
-  height: 176px;
+  max-width: 219px;
+  width: 53%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .skill_contents {
-  display: flex;
-  flex-wrap: wrap;
   max-width: 1000px;
   margin: 89px auto;
+}
+.skill_contents ul {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 102px;
+  padding: 0 40px;
 }
 .skill_box {
-  width: 410px;
-  height: 640px;
+  max-width: 410px;
+  width: 40%;
+  margin-bottom: 102px;
 }
 .skill_contents_title {
   margin: 40px auto 16px auto;
