@@ -24,22 +24,14 @@
             </h1>
             <nav class="HeaderMenu_pcnav">
                 <ul>
-                    <li> <a href="#home">ホーム<br>HOME</a></li>
-                    <li class="header_about_item"><a href="#about">私について<br>ABOUT<div class="header_about_arrow"></div>
-                        </a>
-                    </li>
-                    <div class="about_item">
-                        <a href="#aboutme" class="about_sub_item">about me</a>
-                    </div>
-                    <li><a href="#skill">スキル<br>SKILL</a></li>
-                    <li class="header_works_item"><a href="#works">制作実績<br>WORKS <div class="header_works_arrow"></div>
-                        </a>
-                    </li>
-                    <div class="works_item">
-                        <a href="#worksmore" class="works_sub_item">Works more</a>
-                    </div>
-                    <li class="header_contact"><a href="#contact"><img src="./images/mail_icon.svg" alt="アイコン"
-                                class="button-icon">お問合せ<br>CONTACT</a></li>
+                    <li> <a href="file:///Users/apple/Desktop/portfolio/index.html">ホーム<br>HOME</a></li>
+                    <li class="header_about_item"><a
+                            href="file:///Users/apple/Desktop/portfolio/index.html#about">私について<br>ABOUT</a></li>
+                    <li><a href="file:///Users/apple/Desktop/portfolio/index.html#skill">スキル<br>SKILL</a></li>
+                    <li class="header_works_item"><a
+                            href="file:///Users/apple/Desktop/portfolio/index.html#works">制作実績<br>WORKS</a></li>
+                    <li class="header_contact"><a href="file:///Users/apple/Desktop/portfolio/index.html#contact"><img
+                                src="./images/mail_icon.svg" alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,6 +40,7 @@
         <h2 class="aboutme_title">About me</h2>
         <div class="aboutme_contents">
             <img src="./images/aboutme.jpg" alt="プロフィール写真" class="aboutme_photo">
+            <div class="about_circle1"></div>
             <div class="aboutme_text">
                 <p class="aboutme_text1">長岡 千穂</p>
                 <p class="aboutme_text2">Nagaoka Chiho</p>
@@ -62,6 +55,7 @@
                 <p class="aboutme_text7">
                     今後は福祉×デザインを軸にお客様の一人一人が笑顔になれるようなデザインをお届けしたいと思っています。
                 </p>
+                <div class="about_circle2 scroll_circle"></div>
             </div>
         </div>
     </section>
@@ -72,12 +66,14 @@
             </h1>
             <nav class="FooterMenu_pcnav">
                 <ul>
-                    <li> <a href="#home">ホーム<br>HOME</a></li>
-                    <li><a href="#about">私について<br>ABOUT</a></li>
-                    <li><a href="#skill">スキル<br>SKILL</a></li>
-                    <li><a href="#works">制作実績<br>WORKS</a></li>
-                    <li class="footer_contact"><a href="#contact"><img src="./images/mail_icon_footer.svg" alt="アイコン"
-                                class="footer_button-icon">お問合せ<br>CONTACT</a></li>
+                    <li> <a href="file:///Users/apple/Desktop/portfolio/index.html">ホーム<br>HOME</a></li>
+                    <li class="header_about_item"><a
+                            href="file:///Users/apple/Desktop/portfolio/index.html#about">私について<br>ABOUT</a></li>
+                    <li><a href="file:///Users/apple/Desktop/portfolio/index.html#skill">スキル<br>SKILL</a></li>
+                    <li class="header_works_item"><a
+                            href="file:///Users/apple/Desktop/portfolio/index.html#works">制作実績<br>WORKS</a></li>
+                    <li class="header_contact"><a href="file:///Users/apple/Desktop/portfolio/index.html#contact"><img
+                                src="./images/mail_icon.svg" alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -97,13 +93,13 @@
         $(function () {
             //クリックで要素を表示
             $('.header_about_item').click(function () {
-                $('.about_item').toggle();
+                $('.about_item').fadeToggle();
             })
         });
         $(function () {
             //クリックで要素を表示
             $('.header_works_item').click(function () {
-                $('.works_item').toggle();
+                $('.works_item').fadeToggle();
             })
         });
 
