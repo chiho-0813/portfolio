@@ -146,22 +146,63 @@ li.works_sub_item {
   padding-top: 112px;
   margin-top: -112px;
 }
-
-@media screen and (max-width: 1000px) {
-  .HeaderMenu_pcnav ul {
-    gap: 35px;
+@media screen and (max-width: 1100px) {
+  .HeaderMenu_pcnav {
+    display: none;
   }
-  .header_logo {
-    width: 70px;
-    padding-right: 12px;
+  .sp_btn {
+    display: block;
+    height: 52px;
+    cursor: pointer;
+    width: 52px;
+    border: 2px solid #ff853c;
+    border-radius: 50%;
   }
-  .header_about_arrow {
-    left: 104%;
+  .sp_btn p {
+    display: block;
   }
-  .header_works_arrow {
-    right: 35%;
+  .sp_btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ff853c;
+    position: relative;
+    top: 23px;
+    left: 10px;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ff853c;
+    position: absolute;
+  }
+  .sp_btn span::before {
+    bottom: 8px;
+  }
+  .sp_btn span::after {
+    top: 8px;
+  }
+  .sp_btn.open span {
+    background-color: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }
+
+.HeaderMenu_spnav,
+.sp_btn p {
+  display: none;
+}
+
 /*FV*/
 .home {
   display: flex;
@@ -311,7 +352,7 @@ li.works_sub_item {
     font-size: 50px;
   }
 }
-@media screen and (max-width: 1093px) {
+@media screen and (max-width: 1100px) {
   .home_text2 {
     font-size: 69px;
   }
@@ -840,7 +881,7 @@ footer p {
   opacity: 1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .FooterMenu_pcnav ul {
     gap: 35px;
   }
