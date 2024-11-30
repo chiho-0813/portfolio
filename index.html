@@ -31,7 +31,7 @@
                                 </span>
                             </a>
                             <ul class="about_item">
-                                <li><a href="file:///Users/apple/Desktop/portfolio/about.html">about me</a>
+                                <li><a href="./about.html">about me</a>
                                 </li>
                             </ul>
                         </li>
@@ -87,7 +87,7 @@
         <p class="about_text3">お客様一人ひとりの想いをデザインの力でお届けしたい。<br>最後にみんなが笑顔になれるデザイナーを目指しています。</p>
         <button class="aboutme-button">
             <div class="about_me">
-                <a href="#aboutme">About me</a>
+                <a href="./about.html">About me</a>
                 <div class="about_circle">
                     <div class="about_arrow"></div>
                 </div>
@@ -230,7 +230,7 @@
             </div>
             <button class="works-button">
                 <div class="works_more">
-                    <a href="#worksmore">Works more</a>
+                    <a href="./works.html">Works more</a>
                     <div class="works_circle1">
                         <div class="works_arrow"></div>
                     </div>
@@ -245,22 +245,31 @@
                 <div class="contact_circle scroll_circle"></div>
             </div>
             <p class="contact_Information">最後までご覧いただきありがとうございます。<br>ご依頼やご相談はお気軽にこちらのフォームをご利用ください。</p>
-            <div class="contact_inquiry">
-                <label for="name" class="">お名前</label>
-                <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
-            </div>
-            <div class="contact_inquiry">
-                <label for="address">メールアドレス</label>
-                <input type="text" id="address" name="address" placeholder="メールアドレスを入力してください" required>
-            </div>
-            <div class="contact_inquiry">
-                <label for="details">お問合せ内容</label>
-                <input type="text" id="details" name="details" placeholder="お問合せ内容を入力してください" required>
-            </div>
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScdWeKU3PridTSLTHMyC2TVIySP9pQ84GAhCKSOSr7cp_L0AA/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <div class="contact_inquiry">
+                    <label for="name" class="">お名前</label>
+                    <input type="text" id="name" name="entry.1451231390" placeholder="お名前を入力してください" required>
+                </div>
+                <div class="contact_inquiry">
+                    <label for="address">メールアドレス</label>
+                    <input type="text" id="address" name="entry.1474637546" placeholder="メールアドレスを入力してください" required>
+                </div>
+                <div class="contact_inquiry">
+                    <label for="details">お問合せ内容</label>
+                    <textarea id="details" name="entry.1915500390" placeholder="お問合せ内容を入力してください" required></textarea>
+                </div>
 
-            <div class="contact_button">
-                <button type="contact" class="contact_button_text">送信する</button>
-            </div>
+                <div class="contact_button">
+                    <button type="contact" class="contact_button_text">送信する</button>
+                </div>
+            </form>
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                onload="if(submitted)  {window.location='file:/thanks.html';}"></iframe>
         </div>
     </section>
     <footer>

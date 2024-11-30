@@ -1,0 +1,179 @@
+/*header*/
+.Header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 8%;
+  box-sizing: border-box;
+  z-index: 200;
+  background-color: #fff;
+}
+.header_logo {
+  width: 129px;
+  background-color: #fff;
+}
+.HeaderMenu_pcnav {
+  display: flex;
+  gap: 46px;
+  font-weight: bold;
+  position: relative;
+}
+.HeaderMenu_pcnav ul {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+}
+.HeaderMenu_pcnav ul li {
+  text-align: center;
+}
+
+/*header_about*/
+.header_about_arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid #3333;
+  border-right: 3px solid #3333;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 30%;
+  left: 107%;
+}
+.header_about_item {
+  position: relative;
+}
+.about_item {
+  color: #fff;
+  padding: 10px;
+  background: #ff853c;
+  border-radius: 8px;
+  position: absolute;
+  top: 105%;
+  right: 70%;
+  display: none;
+}
+
+/*header_works*/
+li.works_item {
+  position: relative;
+}
+.header_works_arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid #3333;
+  border-right: 3px solid #3333;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 40%;
+  right: 33%;
+}
+.works_item {
+  color: #fff;
+  padding: 10px;
+  background: #ff853c;
+  border-radius: 8px;
+  position: absolute;
+  top: 105%;
+  right: 31%;
+  display: none;
+}
+
+/*header_contact*/
+.button-icon {
+  display: flex;
+  width: 16px;
+  max-width: 33px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px 8px 10px 8px;
+  margin-right: 4px;
+}
+.header_contact a {
+  display: flex;
+  max-width: 180px;
+  align-items: center;
+  background: #ff853c;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  padding: 18px 33px;
+}
+
+/*about_works*/
+li.about_sub_item,
+li.works_sub_item {
+  color: #fff;
+}
+/*headerの余白調整*/
+#thanks {
+  padding-top: 317px;
+}
+
+@media screen and (max-width: 1000px) {
+  .HeaderMenu_pcnav ul {
+    gap: 35px;
+  }
+  .header_logo {
+    width: 70px;
+    padding-right: 12px;
+  }
+  .header_about_arrow {
+    left: 104%;
+  }
+  .header_works_arrow {
+    right: 35%;
+  }
+}
+
+/* aboutme */
+.thanks {
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+.thanks h2 {
+  text-align: center;
+  padding-bottom: 48px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.thanks_text {
+  font-size: 26px;
+  line-height: 1.75;
+  text-align: center;
+  padding-bottom: 104px;
+  margin: 0;
+}
+.thanks_contents {
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.thanks-button {
+  display: flex;
+  border-radius: 35px;
+  border: #ff853c;
+  width: 180px;
+  height: 70px;
+  background-color: #ff853c;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto 73px auto;
+}
+p {
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
+.thank_circle {
+  margin: 0 auto;
+}
+.thank_circle a {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
