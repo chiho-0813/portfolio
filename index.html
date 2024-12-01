@@ -31,7 +31,7 @@
                                 </span>
                             </a>
                             <ul class="about_item">
-                                <li><a href="./about.html">about me</a>
+                                <li><a href="#about">about me</a>
                                 </li>
                             </ul>
                         </li>
@@ -57,9 +57,9 @@
                 <p>menu</p>
             </div>
             <nav class="HeaderMenu_spnav">
-                <ul>
-                    <li> <a href="#home">ホーム<br>HOME</a></li>
-                    <ul class="about_menu">
+                <ul class="about_menu">
+                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
+                    <ul>
                         <li class="header_about_item">
                             <a href="#about">私について<br>ABOUT<span class="header_about_arrow">
                                 </span>
@@ -82,7 +82,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <li class="header_contact"><a href="#contact"><img src="./images/mail_icon.svg" alt="アイコン"
+                    <li class="header_contact"><a href="#contact"><img src="./images/sp_mail_icon.svg" alt="アイコン"
                                 class="button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
@@ -107,6 +107,7 @@
             <img src="./images/FV_image.jpg" alt="夕焼けの空" class="home_mainvisual">
         </div>
     </section>
+
     <div class="line">
         <img src="./images/line.svg" alt="">
     </div>
@@ -117,10 +118,11 @@
         </div>
         <div class="about_photo">
             <img src="./images/about_photo.jpg" alt="プロフィール写真" class="about_photo1">
+            <img src="./images/sp_about_photo.jpg" alt="プロフィール写真" class="sp_about_photo1">
             <div class="about_circle1 scroll_circle"></div>
             <div class="about_circle2 scroll_circle"></div>
         </div>
-        <p class="about_text3">お客様一人ひとりの想いをデザインの力でお届けしたい。<br>最後にみんなが笑顔になれるデザイナーを目指しています。</p>
+        <p class="about_text3">お客様一人ひとりの想いをデザインの力でお届けしたい。<br class="pc_br">最後にみんなが笑顔になれるデザイナーを目指しています。</p>
         <button class="aboutme-button">
             <div class="about_me">
                 <a href="./about.html">About me</a>
@@ -217,10 +219,52 @@
             <p class="works_text2">WORKS</p>
             <div class="works_circle scroll_circle"></div>
         </div>
-    </section>
-    <section id="works" class="works">
         <div class="works_content">
             <div class="works_photo">
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/burger_POP1_2.png" media="(max-width:767px)">
+                        <a href="./images/burger_POP1_2.png" data-lightbox="lightbox" data-title="images1/6">
+                            <img src="./images/burger_POP1_2.png" alt=""></a>
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="./images/burger_Rich2-2.png" media="(max-width:767px)">
+                        <a href="./images/burger_Rich2-2.png" data-lightbox="lightbox" data-title="images2/6">
+                            <img src="./images/burger_Rich2-2.png" alt=""></a>
+                    </picture>
+                </div>
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/dezasuta_mobile.jpg" media="(max-width:767px)">
+                        <a href="./images/dezasuta_mobile.jpg" data-lightbox="lightbox" data-title="images3/6">
+                            <img src="./images/dezasuta_mobile.jpg" alt=""></a>
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="./images/trrrrip.jpg" media="(max-width:767px)">
+                        <a href="./images/trrrrip.jpg" data-lightbox="lightbox" data-title="images4/6">
+                            <img src="./images/trrrrip.jpg" alt=""></a>
+                    </picture>
+                </div>
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/life_fv.png" media="(max-width:767px)">
+                        <a href="./images/life_fv.png" data-lightbox="lightbox" data-title="images5/6">
+                            <img src="./images/life_fv.png" alt=""></a>
+                    </picture>
+                </div>
+                <div class="works_oblong">
+                    <picture>
+                        <source srcset="./images/workers.png" media="(max-width:767px)">
+                        <a href="./images/workers.png" data-lightbox="lightbox" data-title="images6/6">
+                            <img src="./images/workers.png" alt=""></a>
+                    </picture>
+                </div>
+            </div>
+            <div class="sp_works_photo">
                 <div class="works_oblong">
                     <picture>
                         <source srcset="./images/burger_POP1_2.png" media="(max-width:767px)">
@@ -336,6 +380,15 @@
                 slidesToScroll: 1
             });
         });
+        $(document).ready(function () {
+            $('.sp_works_photo').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
 
         $(function () {
             //クリックで要素を表示
@@ -377,8 +430,10 @@
         $(function () {
             $('.sp_btn').on('click', function () {
                 $('.sp_btn').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeToggle()
             })
         })
+
     </script>
 
 </body>
