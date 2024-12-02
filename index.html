@@ -58,7 +58,7 @@
             </div>
             <nav class="HeaderMenu_spnav">
                 <ul class="about_menu">
-                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
+                    <li> <a href="#home">ホーム<br>HOME</a></li>
                     <ul>
                         <li class="header_about_item">
                             <a href="#about">私について<br>ABOUT<span class="header_about_arrow">
@@ -433,6 +433,22 @@
                 $('.HeaderMenu_spnav').fadeToggle()
             })
         })
+        $(function () {
+            $('.HeaderMenu_spnav a').on('click', function () {
+                $('.HeaderMenu_spnav a').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeOut()
+            })
+            $('sp_btn').on('click', function () {
+                $('sp_btn').off('open');
+
+            })
+        })
+
+
+
+
+
+
 
     </script>
 
