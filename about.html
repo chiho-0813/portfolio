@@ -24,20 +24,59 @@
             </h1>
             <nav class="HeaderMenu_pcnav">
                 <ul>
-                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
-                    <li class="header_about_item"><a href="./index.html#about">私について<br>ABOUT</a></li>
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <ul class="about_menu">
+                        <li class="header_about_item">
+                            <a href="./index.html#about">私について<br>ABOUT
+                            </a>
+                        </li>
+                    </ul>
                     <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
-                    <li class="header_works_item"><a href="./index.html#works">制作実績<br>WORKS</a></li>
+                    <ul class="works_menu">
+                        <li class="header_works_item">
+                            <a href="./index.html#works">制作実績<br>WORKS
+                            </a>
+                        </li>
+                    </ul>
                     <li class="header_contact"><a href="./index.html#contact"><img src="./images/mail_icon.svg"
                                 alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn ">
+                <span></span>
+                <p>menu</p>
+            </div>
+            <nav class="HeaderMenu_spnav">
+                <ul class="about_menu">
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <ul>
+                        <li class="header_about_item">
+                            <a href="./index.html#about">私について<br>ABOUT
+                            </a>
+                        </li>
+                    </ul>
+                    <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
+                    <ul class="works_menu">
+                        <li class="header_works_item">
+                            <a href="./index.html#works">制作実績<br>WORKS
+                            </a>
+                        </li>
+                    </ul>
+                    <li class="sp_header_contact"><a href="./index.html#contact"><img src="./images/sp_mail_icon.svg"
+                                alt="アイコン" class="sp_button-icon">お問合せ<br>CONTACT</a></li>
+                </ul>
+            </nav>
+
         </div>
+
     </header>
     <section id="aboutme" class="aboutme">
         <h2 class="aboutme_title">About me</h2>
         <div class="aboutme_contents">
             <img src="./images/aboutme.jpg" alt="プロフィール写真" class="aboutme_photo">
+            <img src="./images/aboutme_1.jpg" alt="プロフィール写真" class="aboutme_photo1">
+
+
             <div class="about_circle1"></div>
             <div class="aboutme_text">
                 <p class="aboutme_text1">長岡 千穂</p>
@@ -64,12 +103,12 @@
             </h1>
             <nav class="FooterMenu_pcnav">
                 <ul>
-                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
-                    <li class="header_about_item"><a href="./index.html#about">私について<br>ABOUT</a></li>
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <li><a href="./index.html#about">私について<br>ABOUT</a></li>
                     <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
-                    <li class="header_works_item"><a href="./index.html#works">制作実績<br>WORKS</a></li>
-                    <li class="header_contact"><a href="./index.html#contact"><img src="./images/mail_icon.svg"
-                                alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
+                    <li><a href="./index.html#works">制作実績<br>WORKS</a></li>
+                    <li class="footer_contact"><a href="./index.html#contact"><img src="./images/mail_icon_footer.svg"
+                                alt="アイコン" class="footer_button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -122,6 +161,46 @@
                     }
                 })
             });
+            $(function () {
+                $('.sp_btn').on('click', function () {
+                    $('.sp_btn').toggleClass('open');
+                    $('.HeaderMenu_spnav').fadeToggle()
+                })
+            })
+            $(function () {
+                $('.HeaderMenu_spnav a').on('click', function () {
+                    $('.HeaderMenu_spnav a').toggleClass('open');
+                    $('.HeaderMenu_spnav').fadeOut()
+                })
+                $('sp_btn').on('click', function () {
+                    $('sp_btn').off('open');
+
+                })
+            })
+            $(function () {
+                // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+                $(".sp_btn").click(function () {
+
+                    // 現在のbodyタグのoverflowスタイルを確認
+                    if ($("body").css("overflow") === "hidden") {
+
+                        // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                        $("body").css({ height: "", overflow: "" });
+
+                    } else {
+
+                        // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                        $("body").css({ height: "100%", overflow: "hidden" });
+
+                    }
+                });
+            });
+
+
+
+
+
+
         });
     </script>
 
