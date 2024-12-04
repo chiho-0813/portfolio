@@ -469,10 +469,6 @@ li.works_sub_item {
     top: 44%;
     left: 26%;
   }
-  body {
-    height: 100%;
-    overflow: hidden;
-  }
 }
 @media (max-width: 768px) {
   .home_text {
