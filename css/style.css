@@ -1113,6 +1113,7 @@ li.works_sub_item {
   border: none;
   margin: 0 auto 160px auto;
   border-radius: 8px;
+  cursor: pointer;
 }
 .contact_button_text {
   font-size: 24px;
@@ -1121,6 +1122,7 @@ li.works_sub_item {
   background: none;
   color: #fff;
   margin: 20px 36%;
+  cursor: pointer;
 }
 textarea {
   width: 100%;
@@ -1162,6 +1164,10 @@ textarea:focus {
   }
   .contact_button {
     margin: 0 auto 108px auto;
+  }
+  textarea::placeholder {
+    font-weight: normal;
+    font-family: "Arial", sans-serif;
   }
 }
 /*footer*/

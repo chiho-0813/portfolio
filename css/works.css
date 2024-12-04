@@ -190,10 +190,6 @@ li.works_sub_item {
   .sp_btn span::before {
     bottom: 8px;
   }
-  body {
-    height: 100%;
-    overflow: hidden;
-  }
 }
 
 .sp_btn.open span {
