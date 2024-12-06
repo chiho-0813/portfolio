@@ -24,12 +24,46 @@
             </h1>
             <nav class="HeaderMenu_pcnav">
                 <ul>
-                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
-                    <li class="header_about_item"><a href="./index.html#about">私について<br>ABOUT</a></li>
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <ul class="about_menu">
+                        <li class="header_about_item">
+                            <a href="./index.html#about">私について<br>ABOUT
+                            </a>
+                        </li>
+                    </ul>
                     <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
-                    <li class="header_works_item"><a href="./index.html#works">制作実績<br>WORKS</a></li>
+                    <ul class="works_menu">
+                        <li class="header_works_item">
+                            <a href="./index.html#works">制作実績<br>WORKS
+                            </a>
+                        </li>
+                    </ul>
                     <li class="header_contact"><a href="./index.html#contact"><img src="./images/mail_icon.svg"
                                 alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn ">
+                <span></span>
+                <p>menu</p>
+            </div>
+            <nav class="HeaderMenu_spnav">
+                <ul class="about_menu">
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <ul>
+                        <li class="header_about_item">
+                            <a href="./index.html#about">私について<br>ABOUT
+                            </a>
+                        </li>
+                    </ul>
+                    <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
+                    <ul class="works_menu">
+                        <li class="header_works_item">
+                            <a href="./index.html#works">制作実績<br>WORKS
+                            </a>
+                        </li>
+                    </ul>
+                    <li class="sp_header_contact"><a href="./index.html#contact"><img src="./images/sp_mail_icon.svg"
+                                alt="アイコン" class="sp_button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -90,22 +124,216 @@
     </section>
     <footer>
         <div class="Footer">
-            <h1 class="footer_logo">
-                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+            <h1 class="header_logo">
+                <a href="./index.html">
+                    <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+                </a>
             </h1>
             <nav class="FooterMenu_pcnav">
                 <ul>
-                    <li> <a href="./index.html">ホーム<br>HOME</a></li>
-                    <li class="header_about_item"><a href="./index.html#about">私について<br>ABOUT</a></li>
+                    <li> <a href="./index.html#home">ホーム<br>HOME</a></li>
+                    <li><a href="./index.html#about">私について<br>ABOUT</a></li>
                     <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
-                    <li class="header_works_item"><a href="./index.html#works">制作実績<br>WORKS</a></li>
-                    <li class="header_contact"><a href="./index.html#contact"><img src="./images/mail_icon.svg"
-                                alt="アイコン" class="button-icon">お問合せ<br>CONTACT</a></li>
+                    <li><a href="./index.html#works">制作実績<br>WORKS</a></li>
+                    <li class="footer_contact"><a href="./index.html#contact"><img src="./images/mail_icon_footer.svg"
+                                alt="アイコン" class="footer_button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
         <p>© 2024 CHIHO DESIGN All rights reserved.</p>
+        <p id="page-top"><a href="#">TOP</a></p>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $('.works_photo').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+        $(document).ready(function () {
+            $('.sp_works_photo').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+
+        $(function () {
+            //クリックで要素を表示
+            $('.header_about_item').click(function () {
+                $('.about_item').fadeToggle();
+            })
+        });
+        $(function () {
+            //クリックで要素を表示
+            $('.header_works_item').click(function () {
+                $('.works_item').fadeToggle();
+            })
+        });
+
+        $(function () {
+            // ウィンドウをスクロールしたら…
+            $(window).scroll(function () {
+                // ウィンドウの高さを取得
+                const wHeight = $(window).height();
+                // スクロールした量を取得
+                const wScroll = $(window).scrollTop();
+                // それぞれのblockクラスに対して…
+                $(".line").each(function () {
+                    // それぞれのblockクラスのウィンドウからの高さを取得
+                    const bPosition = $(this).offset().top;
+                    // スクロールした量が要素の高さを上回ったら
+                    // その数値にウィンドウの高さを引き、最後に200pxを足す
+                    if (wScroll > bPosition - wHeight + 200) {
+                        $(this).addClass("fadeIn");
+                    }
+                });
+                $(".scroll_circle").each(function () {
+                    if ((wScroll + wHeight) > $(this).offset().top) {
+                        $(this).addClass('is-show');
+                    }
+                })
+            });
+        });
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeToggle()
+            })
+        })
+        $(function () {
+            $('.HeaderMenu_spnav a').on('click', function () {
+                $('.sp_btn').removeClass('open');
+                $('.HeaderMenu_spnav').fadeOut()
+            })
+        })
+        $(function () {
+            // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+            $(".sp_btn").click(function () {
+
+                // 現在のbodyタグのoverflowスタイルを確認
+                if ($("body").css("overflow") === "hidden") {
+
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
+
+                } else {
+
+                    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                    $("body").css({ height: "100%", overflow: "hidden" });
+
+                }
+            });
+        });
+        $(function () {
+            var pagetop = $('#page-top');
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+</footer>
+<script>
+    $(document).ready(function () {
+        $('.works_photo').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+    });
+
+    $(function () {
+        //クリックで要素を表示
+        $('.header_about_item').click(function () {
+            $('.about_item').fadeToggle();
+        })
+    });
+    $(function () {
+        //クリックで要素を表示
+        $('.header_works_item').click(function () {
+            $('.works_item').fadeToggle();
+        })
+    });
+
+    $(function () {
+        // ウィンドウをスクロールしたら…
+        $(window).scroll(function () {
+            // ウィンドウの高さを取得
+            const wHeight = $(window).height();
+            // スクロールした量を取得
+            const wScroll = $(window).scrollTop();
+            // それぞれのblockクラスに対して…
+            $(".line").each(function () {
+                // それぞれのblockクラスのウィンドウからの高さを取得
+                const bPosition = $(this).offset().top;
+                // スクロールした量が要素の高さを上回ったら
+                // その数値にウィンドウの高さを引き、最後に200pxを足す
+                if (wScroll > bPosition - wHeight + 200) {
+                    $(this).addClass("fadeIn");
+                }
+            });
+            $(".scroll_circle").each(function () {
+                if ((wScroll + wHeight) > $(this).offset().top) {
+                    $(this).addClass('is-show');
+                }
+            })
+        });
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeToggle()
+            })
+        })
+        $(function () {
+            $('.HeaderMenu_spnav a').on('click', function () {
+                $('.HeaderMenu_spnav a').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeOut()
+            })
+            $('sp_btn').on('click', function () {
+                $('sp_btn').off('open');
+
+            })
+        })
+    });
+    $(function () {
+        // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+        $(".sp_btn").click(function () {
+
+            // 現在のbodyタグのoverflowスタイルを確認
+            if ($("body").css("overflow") === "hidden") {
+
+                // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                $("body").css({ height: "", overflow: "" });
+
+            } else {
+
+                // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                $("body").css({ height: "100%", overflow: "hidden" });
+
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

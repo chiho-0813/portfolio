@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHIHO DESIGN</title>
+    <link rel="icon" href="./images/icon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -20,7 +21,9 @@
     <header>
         <div class="Header">
             <h1 class="header_logo">
-                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+                <a href="./index.html">
+                    <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+                </a>
             </h1>
             <nav class="HeaderMenu_pcnav">
                 <ul>
@@ -369,6 +372,7 @@
             </nav>
         </div>
         <p>© 2024 CHIHO DESIGN All rights reserved.</p>
+        <p id="page-top"><a href="#">TOP</a></p>
     </footer>
     <script>
         $(document).ready(function () {
@@ -457,7 +461,21 @@
                 }
             });
         });
-
+        $(function () {
+            var pagetop = $('#page-top');
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
 
 
 

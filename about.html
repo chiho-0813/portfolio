@@ -20,7 +20,9 @@
     <header>
         <div class="Header">
             <h1 class="header_logo">
-                <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+                <a href="./index.html">
+                    <img src="./images/chiho_logo.svg" alt="チホデザインロゴ">
+                </a>
             </h1>
             <nav class="HeaderMenu_pcnav">
                 <ul>
@@ -113,6 +115,7 @@
             </nav>
         </div>
         <p>© 2024 CHIHO DESIGN All rights reserved.</p>
+        <p id="page-top"><a href="#">TOP</a></p>
     </footer>
     <script>
         $(document).ready(function () {
@@ -121,6 +124,15 @@
                 infinite: true,
                 speed: 500,
                 slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+        $(document).ready(function () {
+            $('.sp_works_photo').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
                 slidesToScroll: 1
             });
         });
@@ -161,47 +173,60 @@
                     }
                 })
             });
-            $(function () {
-                $('.sp_btn').on('click', function () {
-                    $('.sp_btn').toggleClass('open');
-                    $('.HeaderMenu_spnav').fadeToggle()
-                })
-            })
-            $(function () {
-                $('.HeaderMenu_spnav a').on('click', function () {
-                    $('.HeaderMenu_spnav a').toggleClass('open');
-                    $('.HeaderMenu_spnav').fadeOut()
-                })
-                $('sp_btn').on('click', function () {
-                    $('sp_btn').off('open');
-
-                })
-            })
-            $(function () {
-                // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
-                $(".sp_btn").click(function () {
-
-                    // 現在のbodyタグのoverflowスタイルを確認
-                    if ($("body").css("overflow") === "hidden") {
-
-                        // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-                        $("body").css({ height: "", overflow: "" });
-
-                    } else {
-
-                        // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
-                        $("body").css({ height: "100%", overflow: "hidden" });
-
-                    }
-                });
-            });
-
-
-
-
-
-
         });
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.HeaderMenu_spnav').fadeToggle()
+            })
+        })
+        $(function () {
+            $('.HeaderMenu_spnav a').on('click', function () {
+                $('.sp_btn').removeClass('open');
+                $('.HeaderMenu_spnav').fadeOut()
+            })
+        })
+        $(function () {
+            // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+            $(".sp_btn").click(function () {
+
+                // 現在のbodyタグのoverflowスタイルを確認
+                if ($("body").css("overflow") === "hidden") {
+
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
+
+                } else {
+
+                    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                    $("body").css({ height: "100%", overflow: "hidden" });
+
+                }
+            });
+        });
+        $(function () {
+            var pagetop = $('#page-top');
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+
+
+
+
+
+
+
+
     </script>
 
 </body>
