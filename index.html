@@ -63,12 +63,12 @@
                 <ul class="about_menu">
                     <li> <a href="#home">ホーム<br>HOME</a></li>
                     <ul>
-                        <li class="header_about_item">
+                        <li class="sp_header_about_item ">
                             <a href="#about">私について<br>ABOUT<span class="sp_header_about_arrow">
                                 </span>
                             </a>
-                            <ul class="about_item">
-                                <li><a href="./about.html">about me</a>
+                            <ul compact="sp_about_item">
+                                <li class=" sp_about_me"><a href="./about.html">about me</a>
                                 </li>
                             </ul>
                         </li>
@@ -79,8 +79,8 @@
                             <a href="#works">制作実績<br>WORKS<span class="sp_header_works_arrow">
                                 </span>
                             </a>
-                            <ul class="works_item">
-                                <li><a href="./works.html"> Works more</a>
+                            <ul class="sp_works_item">
+                                <li class="sp_works_more"><a href="./works.html"> Works more</a>
                                 </li>
                             </ul>
                         </li>
@@ -128,10 +128,11 @@
         <p class="about_text3">お客様一人ひとりの想いをデザインの力でお届けしたい。<br class="pc_br">最後にみんなが笑顔になれるデザイナーを目指しています。</p>
         <button class="aboutme-button">
             <div class="about_me">
-                <a href="./about.html">About me</a>
-                <div class="about_circle">
-                    <div class="about_arrow"></div>
-                </div>
+                <a href="./about.html">About me
+                    <div class="about_circle">
+                        <div class="about_arrow"></div>
+                    </div>
+                </a>
             </div>
         </button>
     </section>
@@ -313,10 +314,11 @@
             </div>
             <button class="works-button">
                 <div class="works_more">
-                    <a href="./works.html">Works more</a>
-                    <div class="works_circle1">
-                        <div class="works_arrow"></div>
-                    </div>
+                    <a href="./works.html">Works more
+                        <div class="works_circle1">
+                            <div class="works_arrow"></div>
+                        </div>
+                    </a>
                 </div>
             </button>
     </section>
@@ -393,7 +395,6 @@
                 slidesToScroll: 1
             });
         });
-
         $(function () {
             //クリックで要素を表示
             $('.header_about_item').click(function () {
@@ -476,6 +477,15 @@
                 return false;
             });
         });
+        $(function () {
+            $('.HeaderMenu_spnav a').on('click', function () {
+                if ($("body").css("overflow") === "hidden")
+
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
+            })
+
+        })
 
 
 
