@@ -249,7 +249,7 @@ li.works_sub_item {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 90px;
+  gap: 35px;
   font-size: 18px;
   font-weight: bold;
 }

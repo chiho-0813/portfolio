@@ -62,34 +62,13 @@
             <nav class="HeaderMenu_spnav">
                 <ul class="about_menu">
                     <li> <a href="#home">ホーム<br>HOME</a></li>
-                    <ul>
-                        <li class="sp_header_about_item ">
-                            <a href="#about">私について<br>ABOUT<span class="sp_header_about_arrow">
-                                </span>
-                            </a>
-                            <ul compact="sp_about_item">
-                                <li class=" sp_about_me"><a href="./about.html">about me</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <li><a href="#about">私について<br>ABOUT</a></li>
                     <li><a href="#skill">スキル<br>SKILL</a></li>
-                    <ul class="works_menu">
-                        <li class="header_works_item">
-                            <a href="#works">制作実績<br>WORKS<span class="sp_header_works_arrow">
-                                </span>
-                            </a>
-                            <ul class="sp_works_item">
-                                <li class="sp_works_more"><a href="./works.html"> Works more</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <li><a href="#works">制作実績<br>WORKS</a></li>
                     <li class="sp_header_contact"><a href="#contact"><img src="./images/sp_mail_icon.svg" alt="アイコン"
                                 class="sp_button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
-
         </div>
 
     </header>
@@ -439,6 +418,12 @@
             })
         })
         $(function () {
+            $('.sp_header_about_item a').on('click', function () {
+                $('.sp_header_about_item a').toggleClass('open');
+                $('. sp_about_me a').fadeToggle()
+            })
+        })
+        $(function () {
             $('.HeaderMenu_spnav a').on('click', function () {
                 $('.sp_btn').removeClass('open');
                 $('.HeaderMenu_spnav').fadeOut()
@@ -484,8 +469,13 @@
                     // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
                     $("body").css({ height: "", overflow: "" });
             })
-
         })
+
+
+
+
+
+
 
 
 

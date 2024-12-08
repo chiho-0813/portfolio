@@ -224,7 +224,7 @@ li.works_sub_item {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 90px;
+  gap: 35px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -238,7 +238,7 @@ li.works_sub_item {
   border-radius: 35px;
   padding: 18px 33px;
 }
-.sp_about_me a {
+.sp_about_me {
   background: #ff853c;
   text-align: center;
   border-radius: 8px;
@@ -248,7 +248,7 @@ li.works_sub_item {
   height: auto;
   padding: 9px 3px;
 }
-.sp_works_more a {
+.sp_works_more {
   background: #ff853c;
   border-radius: 8px;
   position: absolute;
@@ -278,6 +278,13 @@ li.works_sub_item {
 .sp_header_about_item {
   position: relative;
 }
+.sp_about_me {
+  display: none; /* 初期状態で非表示 */
+}
+.sp_about_me .open {
+  display: block; /* JavaScriptで切り替える */
+}
+
 /*FV*/
 .home {
   display: flex;
