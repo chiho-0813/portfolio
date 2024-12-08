@@ -230,8 +230,8 @@ li.works_sub_item {
   font-weight: bold;
 }
 .sp_header_contact a {
-  background: #fff;
-  color: #ff853c;
+  background: #ff853c;
+  color: #fff;
   display: flex;
   max-width: 180px;
   align-items: center;
@@ -241,7 +241,7 @@ li.works_sub_item {
 }
 
 .sp_button-icon {
-  background: #ff853c;
+  background: #fff;
   display: flex;
   width: 16px;
   max-width: 33px;
@@ -254,31 +254,6 @@ li.works_sub_item {
 }
 .sp_btn.open p {
   display: none;
-}
-.sp_about_me a {
-  background: #ff853c;
-  text-align: center;
-  border-radius: 8px;
-  position: absolute;
-  top: 105%;
-  left: -4%;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  padding: 8px;
-  width: 100%;
-}
-.sp_works_more a {
-  background: #ff853c;
-  border-radius: 8px;
-  position: absolute;
-  top: 110%;
-  left: -32%;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  padding: 8px;
-  width: 150%;
 }
 li.sp_header_about_item {
   position: relative;

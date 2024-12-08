@@ -196,6 +196,12 @@
             })
         })
         $(function () {
+            $('.sp_header_about_item a').on('click', function () {
+                $('.sp_header_about_item a').toggleClass('open');
+                $('. sp_about_me a').fadeToggle()
+            })
+        })
+        $(function () {
             $('.HeaderMenu_spnav a').on('click', function () {
                 $('.sp_btn').removeClass('open');
                 $('.HeaderMenu_spnav').fadeOut()
@@ -241,15 +247,7 @@
                     // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
                     $("body").css({ height: "", overflow: "" });
             })
-
         })
-
-
-
-
-
-
-
 
     </script>
 
