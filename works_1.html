@@ -54,7 +54,7 @@
                     <li><a href="./index.html#about">私について<br>ABOUT</a></li>
                     <li><a href="./index.html#skill">スキル<br>SKILL</a></li>
                     <li><a href="./index.html#works">制作実績<br>WORKS</a></li>
-                    <li class="sp_header_contact"><a href="./index.html#contact"><img src="./images/sp_mail_icon.svg"
+                    <li class="sp_header_contact"><a href="./index.html#contact"><img src="./images/mail_icon.svg"
                                 alt="アイコン" class="sp_button-icon">お問合せ<br>CONTACT</a></li>
                 </ul>
             </nav>
@@ -152,6 +152,7 @@
                 slidesToScroll: 1
             });
         });
+
         $(function () {
             //クリックで要素を表示
             $('.header_about_item').click(function () {
@@ -196,12 +197,6 @@
             })
         })
         $(function () {
-            $('.sp_header_about_item a').on('click', function () {
-                $('.sp_header_about_item a').toggleClass('open');
-                $('. sp_about_me a').fadeToggle()
-            })
-        })
-        $(function () {
             $('.HeaderMenu_spnav a').on('click', function () {
                 $('.sp_btn').removeClass('open');
                 $('.HeaderMenu_spnav').fadeOut()
@@ -240,16 +235,16 @@
                 return false;
             });
         });
-        $(function () {
-            $('.HeaderMenu_spnav a').on('click', function () {
-                if ($("body").css("overflow") === "hidden")
 
-                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-                    $("body").css({ height: "", overflow: "" });
-            })
-        })
+
+
+
+
+
+
 
     </script>
+
 
 </body>
 
