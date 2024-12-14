@@ -347,7 +347,7 @@ img.aboutme_photo {
   filter: blur(40px);
   position: absolute;
   top: 80%;
-  right: -20%;
+  right: 0%;
   width: 194px;
   height: 194px;
   border-radius: 50%;
